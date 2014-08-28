@@ -1,0 +1,9 @@
+name: "Priyanka Deo"
+description: ""
+
+url: "notPriya.github.io"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty

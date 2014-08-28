@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!-- Insert your metadata here. -->
+<head>
+	<meta charset="utf-8">
+	<title>{{ site.name }}</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/backstretch.css">
+	<link rel="shortcut icon" href="images/favicon.png">
+</head>
+
+<body>
+{% include header.html %}
+
+<main>
+
+{% include main_image.html %}
+
+<div class="container">
+	{{ content }}
+</div>
+
+</main>
+
+{% include footer.html %}
+
+</body>
+
+</html>

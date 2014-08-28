@@ -41,3 +41,9 @@ Icon
 css/*.css.map
 css/*.css
 css/.sass-cache
+
+# ========================
+# Jekyll generated Files
+# ========================
+
+_site
