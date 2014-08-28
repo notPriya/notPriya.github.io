@@ -3,8 +3,20 @@ title: Priyanka Deo
 layout: default
 ---
 
-<h1> Hello World </h1>
+<!-- ==============Initialize a section=========== -->
+{% assign id = 'projects' %}
+{% assign title = 'Projects' %}
+{% assign description = 'Things that I am working on' %}
+{% assign content = '<p> meow </p>' %}
 
-<p> Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, placerat vel vestibulum vel, dapibus quis libero. </p>
+<!-- ================Create a section============= -->
+{% include section.html id=id title=title description=description content=content %}
 
-<p> Donec libero libero, bibendum non condimentum ac, ullamcorper at sapien. Du is feugiat urna vel justo cursus facilisis. Vivamus ligula dui, convallis a varius vitae, facilisis eget magna. </p>
+<!-- ==============Initialize a section=========== -->
+{% assign id = 'gallery' %}
+{% assign title = 'Gallery' %}
+{% assign description = 'Pictures of robots' %}
+{% assign content = '<p> Woof Woof. </p>' %}
+
+<!-- ================Create a section============= -->
+{% include section.html id=id title=title description=description content=content %}
