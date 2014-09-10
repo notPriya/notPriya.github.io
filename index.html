@@ -7,7 +7,14 @@ layout: default
 {% assign id = 'projects' %}
 {% assign title = 'Projects' %}
 {% assign description = 'Things that I am working on' %}
-{% assign content = '<div class="container project-wrapper"> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> <div class="project-box"> <img src="project1.jpg"/> <header>Image Title</header> <span>Image Subcaption</span> </div> </div>' %}
+
+{% capture content %}
+<div class="container project-wrapper">
+{% for project in site.projects %}
+	{{ project.output }}
+{% endfor %}
+</div>
+{% endcapture %}
 
 <!-- ================Create a section============= -->
 {% include section.html id=id title=title description=description content=content %}
