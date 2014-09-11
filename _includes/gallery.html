@@ -1,0 +1,17 @@
+<div class="mini-menu">
+<img src="{{ site.url }}/images/menu_icon.png" />
+<ul>
+{% for album in site.gallery %}
+	<li onclick="setAlbum({{ forloop.index }})">
+		<a>{{ album.title }}</a>
+		<p>{{ album.caption }}</p>
+	</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="gallery">
+{% for album in site.gallery %}
+	{{ album.output }}
+{% endfor %}
+</div>

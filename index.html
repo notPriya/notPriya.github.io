@@ -48,7 +48,9 @@ layout: default
 {% assign id = 'gallery' %}
 {% assign title = 'Gallery' %}
 {% assign description = 'Pictures of robots' %}
-{% assign content = '<p> Meow </p>' %}
+{% capture content %}
+{% include gallery.html %}
+{% endcapture %}
 
 <!-- ================Create a section============= -->
 {% include section.html id=id title=title description=description content=content %}

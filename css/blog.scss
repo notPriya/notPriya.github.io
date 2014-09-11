@@ -1,43 +1,6 @@
 ---
 ---
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeBackSmall {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(.9);
-  }
-}
-
 @keyframes fadeBackSmall {
   0% {
     opacity: 1;
@@ -55,75 +18,47 @@
   animation-name: fadeBackSmall;
 }
 
+@-webkit-keyframes fadeInSmall {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
 
-
-.blog-menu{
-	float: left;
-	text-align: -webkit-left;
-	z-index: 10;
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.blog-menu img{
-	height: 3em;
-	width: 3em;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
+@keyframes fadeInSmall {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.blog-menu:hover ul{
-	display: block;
-
-	-moz-animation: fadeIn .3s ease-in  ;
-	-webkit-animation: fadeIn .3s ease-in ;
-	animation:fadeIn .3s ease-in ;
+.fadeInSmall {
+  -webkit-animation-name: fadeInSmall;
+  animation-name: fadeInSmall;
 }
 
-.blog-menu ul{
-	position: absolute;
-	background-color: #FFF;
-	display: none;
-	list-style-type: none;
-	margin: 0px;
-	max-height: 150px;
-	overflow: auto;	
-
-	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-}
-
-.blog-menu li{
-	padding: 10px;
-	width: 250px;
-	border-bottom: 1px solid #EEE;
-}
-
-.blog-menu li:last-child{
-	border-bottom: none;
-}
-
-.blog-menu a{
-	font-weight: bold;
-}
-
-.blog-menu p{
-	-webkit-margin-before: 0px;
-	-webkit-margin-after: 0px;
-}
 
 .blog-preview{
-	height: 300px;
+	height: 400px;
+	margin: 0px 50px;
 }
 
 .blog-preview-item{
 	display: none;
-	margin-left: 50px;
-	height: 300px;
-}
 
-.blog-preview-item:focus{
-	-moz-animation: fadeBackSmall .3s ease-in  ;
-	-webkit-animation: fadeBackSmall .3s ease-in ;
-	animation:fadeBackSmall .3s ease-in ;
+	-moz-animation: fadeInSmall .3s ease-in  ;
+	-webkit-animation: fadeInSmall .3s ease-in ;
+	animation:fadeInSmall .3s ease-in ;
 }
 
 .blog-preview-item header{
@@ -136,7 +71,8 @@
 	color: #5B7778;
 	font-weight: bold;
 	font-size: 1.5em;
-	margin-below: 1.5em;
+	margin-bottom: 1.5em;
+	display: block;
 }
 
 .blog-preview-item img{
@@ -149,37 +85,4 @@
 
 .blog-preview-item a{
 	font-size: 1.17em;
-}
-
-.blog-wrapper {
-
-}
-
-.blog-wrapper header{
-
-}
-
-.blog-wrapper .date{
-
-}
-
-.blog-wrapper .description{
-
-}
-
-.blog-post {
-
-}
-
-.blog-post header{
-
-}
-
-
-.blog-post img{
-
-}
-
-.blog-post p{
-
 }

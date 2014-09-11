@@ -1,4 +1,4 @@
-<div class="blog-menu">
+<div class="mini-menu">
 <img src="{{ site.url }}/images/menu_icon.png" />
 <ul>
 {% for post in site.posts %}
@@ -30,8 +30,6 @@ function setPost(index) {
 
 	next_blog = document.getElementById('blog' + index);
 	next_blog.setAttribute('style', 'display: block;');
-	next_blog.setAttribute('style', 'display: block;');
-
 
 	current_post = index;
 }
