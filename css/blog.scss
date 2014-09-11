@@ -26,9 +26,41 @@
   animation-name: fadeIn;
 }
 
+@-webkit-keyframes fadeBackSmall {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(.9);
+  }
+}
+
+@keyframes fadeBackSmall {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(.9);
+  }
+}
+
+.fadeBackSmall {
+  -webkit-animation-name: fadeBackSmall;
+  animation-name: fadeBackSmall;
+}
+
+
+
 .blog-menu{
 	float: left;
 	text-align: -webkit-left;
+	z-index: 10;
 }
 
 .blog-menu img{
@@ -47,12 +79,13 @@
 }
 
 .blog-menu ul{
+	position: absolute;
 	background-color: #FFF;
 	display: none;
 	list-style-type: none;
 	margin: 0px;
-	max-height: 300px;
-	overflow: auto;
+	max-height: 150px;
+	overflow: auto;	
 
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
@@ -78,29 +111,44 @@
 }
 
 .blog-preview{
-	height: 500px;
+	height: 300px;
 }
 
 .blog-preview-item{
 	display: none;
 	margin-left: 50px;
-	height: 500px;
+	height: 300px;
+}
+
+.blog-preview-item:focus{
+	-moz-animation: fadeBackSmall .3s ease-in  ;
+	-webkit-animation: fadeBackSmall .3s ease-in ;
+	animation:fadeBackSmall .3s ease-in ;
 }
 
 .blog-preview-item header{
-
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0.7em 0 0.7em 0;
 }
 
 .blog-preview-item span{
-
+	color: #5B7778;
+	font-weight: bold;
+	font-size: 1.5em;
+	margin-below: 1.5em;
 }
 
 .blog-preview-item img{
-
+	height: 200px;
 }
 
 .blog-preview-item p{
+	font-size: 1.17em;
+}
 
+.blog-preview-item a{
+	font-size: 1.17em;
 }
 
 .blog-wrapper {

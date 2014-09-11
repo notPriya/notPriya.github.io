@@ -10,19 +10,31 @@
 </ul>
 </div>
 
-<script>
-var current_post;
-function setPost(index) { current_post = index; }
-</script>
-
 <div class="blog-preview">
 {% for post in site.posts %}
 	<div class="blog-preview-item" id="blog{{ forloop.index }}">
 		<header>{{ post.title }}</header>
-		<span>{{ post.date | date_to_string }}</span>
+		<span>{{ post.date | date_to_string }}</span> <br/>
 		<img src="{{ site.url }}/images/{{ post.main-image }}" />
 		{{ post.excerpt }}
-		<a href="{{ site.url }}{{ post.url }}">Read More</a>
+		<a href="{{ site.url }}{{ post.url }}">Read More >></a>
 	</div>
 {% endfor %}
 </div>
+
+<script>
+var current_post = 1;
+function setPost(index) {
+	current_blog = document.getElementById('blog' + current_post);
+	current_blog.setAttribute('style', 'display: none;');
+
+	next_blog = document.getElementById('blog' + index);
+	next_blog.setAttribute('style', 'display: block;');
+	next_blog.setAttribute('style', 'display: block;');
+
+
+	current_post = index;
+}
+setPost(1);
+</script>
+
