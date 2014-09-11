@@ -23,7 +23,9 @@ layout: default
 {% assign id = 'blog' %}
 {% assign title = 'Blog' %}
 {% assign description = 'My Blog' %}
-{% assign content = '<p> Meow </p>' %}
+{% capture content %}
+{% include blog_viewer.html %}
+{% endcapture %}
 
 <!-- ================Create a section============= -->
 {% include section.html id=id title=title description=description content=content %}

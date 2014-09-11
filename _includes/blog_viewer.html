@@ -1,0 +1,28 @@
+<div class="blog-menu">
+<img src="{{ site.url }}/images/menu_icon.png" />
+<ul>
+{% for post in site.posts %}
+	<li onclick="setPost({{ forloop.index }})">
+		<a>{{ post.title }}</a>
+		<p>{{ post.description }}</p>
+	</li>
+{% endfor %}
+</ul>
+</div>
+
+<script>
+var current_post;
+function setPost(index) { current_post = index; }
+</script>
+
+<div class="blog-preview">
+{% for post in site.posts %}
+	<div class="blog-preview-item" id="blog{{ forloop.index }}">
+		<header>{{ post.title }}</header>
+		<span>{{ post.date | date_to_string }}</span>
+		<img src="{{ site.url }}/images/{{ post.main-image }}" />
+		{{ post.excerpt }}
+		<a href="{{ site.url }}{{ post.url }}">Read More</a>
+	</div>
+{% endfor %}
+</div>
