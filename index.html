@@ -20,10 +20,33 @@ layout: default
 {% include section.html id=id title=title description=description content=content %}
 
 <!-- ==============Initialize a section=========== -->
+{% assign id = 'blog' %}
+{% assign title = 'Blog' %}
+{% assign description = 'My Blog' %}
+{% assign content = '<p> Meow </p>' %}
+
+<!-- ================Create a section============= -->
+{% include section.html id=id title=title description=description content=content %}
+
+<!-- ==============Initialize a section=========== -->
+{% assign id = 'about' %}
+{% assign title = 'About Me' %}
+{% assign description = 'Things about me' %}
+
+{% capture content %}
+<img src="priya_pic.png" />
+<h2> So cool. </h2>
+<h2> Woww. </h2>
+{% endcapture %}
+
+<!-- ================Create a section============= -->
+{% include section.html id=id title=title description=description content=content %}
+
+<!-- ==============Initialize a section=========== -->
 {% assign id = 'gallery' %}
 {% assign title = 'Gallery' %}
 {% assign description = 'Pictures of robots' %}
-{% assign content = '<p> Woof Woof. </p>' %}
+{% assign content = '<p> Meow </p>' %}
 
 <!-- ================Create a section============= -->
 {% include section.html id=id title=title description=description content=content %}
