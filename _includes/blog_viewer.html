@@ -4,7 +4,7 @@
 {% for post in site.posts %}
 	<li onclick="setPost({{ forloop.index }})">
 		<a>{{ post.title }}</a>
-		<p>{{ post.description }}</p>
+		<p>{{ post.description | truncatewords: 15}}</p>
 	</li>
 {% endfor %}
 </ul>
@@ -16,7 +16,8 @@
 		<header>{{ post.title }}</header>
 		<span>{{ post.date | date_to_string }}</span> <br/>
 		<img src="{{ site.url }}/images/{{ post.main-image }}" />
-		{{ post.excerpt }}
+		{{ post.excerpt | truncatewords: 70}}</p>
+
 		<a href="{{ site.url }}{{ post.url }}">Read More >></a>
 	</div>
 {% endfor %}

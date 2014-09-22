@@ -11,6 +11,8 @@ permalink: pretty
 collections:
  projects:
   output: true
+ gallery:
+  output: true
 
 defaults:
  - 
@@ -27,4 +29,4 @@ defaults:
     layout: "blog_post"
     image_dir: images/blog_images
 
-permalink: /blog/:title
+permalink: blog/:title

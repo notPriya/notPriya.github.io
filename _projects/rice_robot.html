@@ -1,0 +1,25 @@
+---
+title: Rice Robot
+caption: Tweet the robot; get fresh rice.
+---
+
+<p> Rice Robot is a fully automated rice cooker. Tweet the robot, and the robot will measure and cook a serving of rice and tweet you back when it is done. </p>
+
+<p> For the Build 18 Project Page <a href="http://build18.org/wiki/index.php?title=Rice_Robot!"> click here</a>. </p>
+
+<h1> Rice Robot </h1>
+
+<p> Rice robot is an automated system for making rice. With a tweet, you can start the rice cooker remotely. The appropriate amount of rice and water is measured and placed into the rice cooker. When, the rice cooker is done, the robot sends a response tweet, letting you know that your rice is ready for pickup. It can't get much easier than that! </p>
+
+<h1> How does Rice Robot work? <h1>
+<h2> The Tweets: </h2>
+
+<p> The robot parses the tweet for username and tweet time. If it has not seen the tweet before (newer timestamp), it initiates the rice making process. Once the rice has finished cooking, it sends a tweet mentioning the username it parsed earlier, with a message that tells the user that the rice is ready to be eaten. In order to send multiple messages to the same user, the rice robot also tells the user the number of times it has made rice. </p>
+
+<h2> The Rice Making Process: </h2>
+
+<p> The first thing the robot does, after it receives a tweet, is to open the lid of the rice cooker. A winch lifts the lid, which pivots around a mounting point. Because the rice cooker and the lid are mounted onto the robot, we can ensure reliable closing of the lid every time.</p>
+
+<p> The robot has a rice dispencer attachment, that measures a cup of rice. Using a linear actuator, the robot can open and close the dispencer. When a tweet is received, the robot opens the dispencer that releases one cup of rice down a chute into the rice cooker.</p>
+
+<p> The robot has a 2 liter bottle of water attached to it. A system of plastic tubing, brings water from the the bottle to just below the chute where rice will be dispenced. From there water can naturally fall into the rice cooker. The robot controls the release of water using a servo to pinch the tubes. It times how long the pinch has been released to determine how much water should be let into the rice cooker.</p>

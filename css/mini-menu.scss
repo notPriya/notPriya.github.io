@@ -41,6 +41,7 @@
 .mini-menu{
 	float: left;
 	text-align: -webkit-left;
+	position: absolute;
 	z-index: 10;
 }
 
@@ -65,8 +66,9 @@
 	display: none;
 	list-style-type: none;
 	margin: 0px;
-	max-height: 150px;
-	overflow: auto;	
+	max-height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;	
 
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
@@ -74,6 +76,7 @@
 
 .mini-menu li{
 	padding: 10px;
+	padding-right: 20px;
 	width: 250px;
 	border-bottom: 1px solid #EEE;
 }
