@@ -17,7 +17,7 @@ layout: default
 {% endcapture %}
 
 <!-- ================Create a section============= -->
-{% include section.html id=id title=title description=description content=content %}
+{% include section.html id=id title=title description=description content=content dark=false %}
 
 <!-- ==============Initialize a section=========== -->
 {% assign id = 'blog' %}
@@ -28,19 +28,21 @@ layout: default
 {% endcapture %}
 
 <!-- ================Create a section============= -->
-{% include section.html id=id title=title description=description content=content %}
+{% include section.html id=id title=title description=description content=content dark=false %}
 
 <!-- ==============Initialize a section=========== -->
 {% assign id = 'about' %}
 {% assign title = 'About Me' %}
-{% assign description = 'Things about me' %}
+{% assign description = 'Hi, I&#39;m Priya!' %}
 
 {% capture content %}
-<img style="height: 200px;" src="images/priya_pic.jpg" />
+<img style="height: 200px; padding-bottom: 30px;" src="images/priya_pic.jpg" />
+<p style="font-size: 1.17em;" > I graduated with my Masters in Robotics from Carnegie Mellon University </p>
+<p style="font-size: 1.17em;" > and am currently working in Google Shopping. </p>
 {% endcapture %}
 
 <!-- ================Create a section============= -->
-{% include section.html id=id title=title description=description content=content %}
+{% include section.html id=id title=title description=description content=content dark=true %}
 
 <!-- ==============Initialize a section=========== -->
 {% assign id = 'gallery' %}
@@ -51,4 +53,4 @@ layout: default
 {% endcapture %}
 
 <!-- ================Create a section============= -->
-{% include section.html id=id title=title description=description content=content %}
+{% include section.html id=id title=title description=description content=content dark=false %}

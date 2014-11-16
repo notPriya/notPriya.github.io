@@ -1,4 +1,8 @@
+{% if include.dark %}
+<div class="section-content dark" id={{ include.id }}>
+{% else %}
 <div class="section-content" id={{ include.id }}>
+{% endif %}
 	<div class="container">
 		<header class="head-text">{{ include.title }}</header>
 		<span class="sub-text">{{ include.description }}</span>
