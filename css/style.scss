@@ -189,3 +189,22 @@ color: #F4F8F8;
 .dark .m-line img {
 background-color: #536869;
 }
+
+@media screen and (max-width: 590px) {
+    .n-menu li {
+    display: block;
+    }
+    .nav {
+    height: 100px;
+    }
+}
+
+@media screen and (max-width: 265px) {
+    .n-menu {
+    float: none;
+    margin-top: 3.5em;
+    }
+    .nav {
+    height: 150px;
+    }
+}
