@@ -1,5 +1,5 @@
 <div class="mini-menu">
-<img src="{{ site.url }}/images/menu_icon.png" />
+<img src="https://{{ site.url }}/images/menu_icon.png" />
 <ul>
 {% for post in site.posts %}
 	<li onclick="setPost({{ forloop.index }})">
@@ -15,10 +15,10 @@
 	<div class="blog-preview-item" id="blog{{ forloop.index }}">
 		<header>{{ post.title }}</header>
 		<span>{{ post.date | date_to_string }}</span> <br/>
-		<img src="{{ site.url }}/images/blog_images/{{ post.main-image }}" />
+		<img src="https://{{ site.url }}/images/blog_images/{{ post.main-image }}" />
 		{{ post.excerpt | truncatewords: 70}}</p>
 
-		<a href="{{ site.url }}{{ post.url }}">Read More >></a>
+		<a href="https://{{ site.url }}{{ post.url }}">Read More >></a>
 	</div>
 {% endfor %}
 </div>
