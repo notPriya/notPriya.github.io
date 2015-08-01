@@ -1,5 +1,12 @@
-<div class="project-box"> 
-	<img src="http://{{ site.url  }}/images/{{ page.title | downcase | replace: ' ', '_' }}.jpg"/>
+---
+layout: default
+---
+
+<div class="container"> 
 	<header>{{ page.title }}</header>
 	<span> {{ page.caption }}</span>
+	<img src="http://{{ site.url  }}/images/{{ page.title | downcase | replace: ' ', '_' }}.jpg"/>
+	<div class="project-content">
+		{{ content }}
+	</div>
 </div>
