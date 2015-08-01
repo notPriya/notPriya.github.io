@@ -9,11 +9,7 @@ layout: default
 {% assign description = 'Things that I am working on' %}
 
 {% capture content %}
-<div class="container project-wrapper">
-{% for project in site.projects %}
-	{{ project.output }}
-{% endfor %}
-</div>
+{% include project_list.html %}
 {% endcapture %}
 
 <!-- ================Create a section============= -->

@@ -1,0 +1,10 @@
+<div class="container project-wrapper">
+{% for project in site.projects %}
+	<div class="project-box"> 
+		<img src="http://{{ site.url  }}/images/{{ project.title | downcase | replace: ' ', '_' }}.jpg"/>
+		<header>{{ project.title }}</header>
+		<span> {{ project.caption }}</span>
+	</div>
+{% endfor %}
+</div>
+
