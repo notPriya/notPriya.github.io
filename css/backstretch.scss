@@ -5,7 +5,9 @@
 padding: 5em 0;
 position: relative;
 z-index: 0;
-height: 400px;
+height: calc(100vh - 14em);
+height: -webkit-calc(100vh - 14em);
+height: -moz-calc(100vh - 14em);
 width: 100%;
 
 background-image: url("../images/robots_bg.jpg");
